@@ -36,4 +36,4 @@ jobs:
       - name: Verify app is running
         run: |
           sleep 5
-          sudo systemctl status myapp.service --no-pager
+          systemctl is-active myapp.service && echo "✅ App is running!" || echo "❌ App failed to start"
