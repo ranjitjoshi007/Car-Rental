@@ -1,22 +1,18 @@
 package com.ranjit.carrental.carrental.dto.request.booking;
 
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+
 @Data
-public class CreateBookingRequest {
-    @NotNull(message = "Car is required")
+public class UpdateBookingRequest {
     private long carId;
 
-    @NotBlank(message = "Customer Name is required")
     private String customerName;
 
-    @NotNull(message = "Start date is required")
     private LocalDateTime startDate;
 
-    @NotNull(message = "End date is required")
     private LocalDateTime endDate;
 }
 

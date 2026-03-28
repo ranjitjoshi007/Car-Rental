@@ -2,6 +2,7 @@ package com.ranjit.carrental.carrental.controller;
 
 import com.ranjit.carrental.carrental.domain.entity.Car;
 import com.ranjit.carrental.carrental.dto.request.car.CreateCarRequest;
+import com.ranjit.carrental.carrental.dto.request.car.UpdateCarRequest;
 import com.ranjit.carrental.carrental.exception.ForbiddenException;
 import com.ranjit.carrental.carrental.service.CarService;
 import lombok.RequiredArgsConstructor;
@@ -13,7 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/cars")
 @RequiredArgsConstructor
-public class CarController extends BaseResourceController<Car, Long,CreateCarRequest,CreateCarRequest>{
+public class CarController extends BaseResourceController<Car, Long,CreateCarRequest,UpdateCarRequest>{
     private final CarService service;
 
 
@@ -41,12 +42,12 @@ public class CarController extends BaseResourceController<Car, Long,CreateCarReq
     }
 
     @Override
-    public ResponseEntity<Car> update(Long aLong, CreateCarRequest entity) {
+    public ResponseEntity<Car> update(Long aLong, UpdateCarRequest entity) {
         throw new ForbiddenException("Method not allowed");
     }
 
     @Override
-    public ResponseEntity<Car> partialUpdate(Long aLong, CreateCarRequest entity) {
+    public ResponseEntity<Car> partialUpdate(Long aLong, UpdateCarRequest entity) {
         throw new ForbiddenException("Method not allowed");
     }
 

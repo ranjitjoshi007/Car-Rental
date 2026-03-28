@@ -1,9 +1,5 @@
 package com.ranjit.carrental.carrental.controller;
 
-import com.ranjit.carrental.carrental.domain.entity.Booking;
-import com.ranjit.carrental.carrental.domain.entity.Car;
-import com.ranjit.carrental.carrental.dto.request.car.CreateBookingRequest;
-import com.ranjit.carrental.carrental.dto.request.car.CreateCarRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

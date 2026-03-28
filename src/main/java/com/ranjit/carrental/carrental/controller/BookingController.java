@@ -1,7 +1,8 @@
 package com.ranjit.carrental.carrental.controller;
 
 import com.ranjit.carrental.carrental.domain.entity.Booking;
-import com.ranjit.carrental.carrental.dto.request.car.CreateBookingRequest;
+import com.ranjit.carrental.carrental.dto.request.booking.CreateBookingRequest;
+import com.ranjit.carrental.carrental.dto.request.booking.UpdateBookingRequest;
 import com.ranjit.carrental.carrental.exception.ForbiddenException;
 import com.ranjit.carrental.carrental.service.BookingService;
 import lombok.RequiredArgsConstructor;
@@ -14,7 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/bookings")
 @RequiredArgsConstructor
-public class BookingController extends BaseResourceController<Booking, Long, CreateBookingRequest, CreateBookingRequest> {
+public class BookingController extends BaseResourceController<Booking, Long, CreateBookingRequest, UpdateBookingRequest> {
     private final BookingService service;
 
     @GetMapping("/cars/{id}")
@@ -49,12 +50,12 @@ public class BookingController extends BaseResourceController<Booking, Long, Cre
     }
 
     @Override
-    public ResponseEntity<Booking> update(Long aLong, CreateBookingRequest entity) {
+    public ResponseEntity<Booking> update(Long aLong, UpdateBookingRequest entity) {
         throw new ForbiddenException("Method not allowed");
     }
 
     @Override
-    public ResponseEntity<Booking> partialUpdate(Long aLong, CreateBookingRequest entity) {
+    public ResponseEntity<Booking> partialUpdate(Long aLong, UpdateBookingRequest entity) {
         throw new ForbiddenException("Method not allowed");
     }
 
